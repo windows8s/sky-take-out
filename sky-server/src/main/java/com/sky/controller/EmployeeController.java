@@ -1,9 +1,10 @@
-package com.sky.controller.admin;
+package com.sky.controller;
 
 import com.sky.constant.JwtClaimsConstant;
 import com.sky.dto.EmployeeDTO;
 import com.sky.dto.EmployeeLoginDTO;
 import com.sky.dto.EmployeePageQueryDTO;
+import com.sky.entity.Category;
 import com.sky.entity.Employee;
 import com.sky.properties.JwtProperties;
 import com.sky.result.PageResult;
@@ -162,4 +163,6 @@ public class EmployeeController {
         boolean updateById = employeeService.updateById(employee);
         return Result.success(updateById);
     }
+
+
 }
