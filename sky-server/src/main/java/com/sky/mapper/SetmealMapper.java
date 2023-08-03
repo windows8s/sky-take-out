@@ -1,17 +1,18 @@
 package com.sky.mapper;
 
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
+import com.sky.entity.Setmeal;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
-@Mapper
-public interface SetmealMapper {
-
-    /**
-     * 根据分类id查询套餐的数量
-     * @param id
-     * @return
-     */
-    @Select("select count(id) from setmeal where category_id = #{categoryId}")
-    Integer countByCategoryId(Long id);
+/**
+* @author 86731
+* @description 针对表【setmeal(套餐)】的数据库操作Mapper
+* @createDate 2023-08-03 20:43:25
+* @Entity com.sky.entity.Setmeal
+*/
+public interface SetmealMapper extends BaseMapper<Setmeal> {
 
 }
+
+
+
+

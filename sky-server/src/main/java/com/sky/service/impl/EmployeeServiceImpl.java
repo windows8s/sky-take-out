@@ -105,11 +105,11 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee>
         //设置密码，默认密码
         employee.setPassword(DigestUtils.md5DigestAsHex((SALT + PasswordConstant.DEFAULT_PASSWORD).getBytes()));
         //设置当前记录的创建时间和修改时间
-        employee.setCreateTime(LocalDateTime.now());
-        employee.setUpdateTime(LocalDateTime.now());
-        //TODO 后期需要改为当前登陆用户的id
-        employee.setCreateUser(BaseContext.getCurrentId());
-        employee.setUpdateUser(BaseContext.getCurrentId());
+//        employee.setCreateTime(LocalDateTime.now());
+//        employee.setUpdateTime(LocalDateTime.now());
+//        //TODO 后期需要改为当前登陆用户的id
+//        employee.setCreateUser(BaseContext.getCurrentId());
+//        employee.setUpdateUser(BaseContext.getCurrentId());
         employeeMapper.insert(employee);
 
     }
