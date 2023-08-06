@@ -1,4 +1,4 @@
-package com.sky.controller;
+package com.sky.controller.admin;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.sky.context.BaseContext;
@@ -44,10 +44,10 @@ public class CategoryController {
 
         //默认状态为1，启用
         category.setStatus(1);
-        category.setCreateTime(LocalDateTime.now());
-        category.setUpdateTime(LocalDateTime.now());
-        category.setCreateUser(BaseContext.getCurrentId());
-        category.setUpdateUser(BaseContext.getCurrentId());
+//        category.setCreateTime(LocalDateTime.now());
+//        category.setUpdateTime(LocalDateTime.now());
+//        category.setCreateUser(BaseContext.getCurrentId());
+//        category.setUpdateUser(BaseContext.getCurrentId());
         boolean result = categoryService.save(category);
         return Result.success(result);
     }
@@ -74,8 +74,8 @@ public class CategoryController {
         BeanUtils.copyProperties(categoryDTO,category);
 
         //设置修改时间、修改人
-        category.setUpdateTime(LocalDateTime.now());
-        category.setUpdateUser(BaseContext.getCurrentId());
+//        category.setUpdateTime(LocalDateTime.now());
+//        category.setUpdateUser(BaseContext.getCurrentId());
 
 
         boolean update = categoryService.updateById(category);
